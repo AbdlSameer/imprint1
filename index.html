@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPRINT | Neural-Haptic Skill Transfer System</title>
+  <meta name="description" content="IMPRINT is a neural-haptic skill transfer system that encodes physical mastery directly into a novice's nervous system — in real time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanline-overlay"></div>
+
+  <!-- Three.js 3D Background -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="glitch-text" data-text="IMPRINT">IMPRINT</span>
+    </div>
+    <div class="nav-right">
+      <span class="nav-tag">SYS_2050</span>
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span>SYSTEM ONLINE</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-bg-grid"></div>
+    <!-- Hero 3D torus knot rendered separately inside hero -->
+    <div class="hero-3d-wrapper" id="hero-3d-wrapper"></div>
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span>NEURAL-HAPTIC SKILL TRANSFER — REF. NHX-7</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-main" id="hero-title">
+        <span class="hero-line" data-delay="0">WE DON'T</span>
+        <span class="hero-line" data-delay="100">TRAIN YOU.</span>
+      </h1>
+
+      <div class="hero-sub-row">
+        <div class="sub-divider"></div>
+        <p class="hero-sub">We make you remember skills<br>you've never learned.</p>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-pitch">
+          <p>IMPRINT is a neural-haptic skill transfer system that encodes the physical mastery of experts directly into a novice's nervous system — <em>in real time.</em></p>
+        </div>
+        <div class="hero-stats-mini">
+          <div class="stat-pill">
+            <span class="stat-num">400</span>
+            <span class="stat-label">NEW REACTORS / 2050</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-num">4 MIN</span>
+            <span class="stat-label">SCRAM WINDOW</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-num">600 YRS</span>
+            <span class="stat-label">OF HERITAGE AT RISK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-num">01</span>
+        <span class="section-label">// THE GAP</span>
+      </div>
+      <h2 class="section-title reveal-up">THE CONSCIOUS<br>MIND IS TOO<br><span class="text-accent">SLOW.</span></h2>
+
+      <div class="two-col reveal-up">
+        <div class="problem-left">
+          <p class="p-l">Most critical physical skills can't be taught — they're built through years of repetition until the body knows what to do before the brain catches up.</p>
+          <p class="p-m">This gap between <em>knowing</em> and <em>feeling</em> mastery is where people die and irreplaceable things are destroyed.</p>
+        </div>
+        <div class="problem-right">
+          <div class="fact-card">
+            <span class="fc-num">8–10</span>
+            <span class="fc-unit">YEARS</span>
+            <p>Average time to develop nuclear emergency manual intuition.</p>
+          </div>
+          <div class="fact-card accent">
+            <span class="fc-num">$250K+</span>
+            <span class="fc-unit">PER OPERATOR</span>
+            <p>Average nuclear operator training cost. Still insufficient.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-solution-line reveal-up">
+        <p>No training program. No simulator. No AI guidance system. None speak to the nervous system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION - 3 LAYERS -->
+  <section id="solution" class="section solution-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-num">02</span>
+        <span class="section-label">// ARCHITECTURE</span>
+      </div>
+      <h2 class="section-title reveal-up">THREE SIMULTANEOUS<br>ENCODING <span class="text-accent">LAYERS.</span></h2>
+
+      <div class="layers-grid">
+        <div class="layer-card reveal-card" data-delay="0">
+          <div class="layer-top">
+            <span class="layer-num">L.01</span>
+            <div class="layer-icon-bar"></div>
+          </div>
+          <h3 class="layer-title">HAPTIC<br>ENCODING</h3>
+          <p>Ultra-thin exogloves with a full-hand micro-actuator grid. IMPRINT re-encodes master-practitioner patterns as haptic signals. The user's hands don't follow instructions — they receive the physical memory of someone who has done this ten thousand times.</p>
+          <div class="layer-footer">
+            <span class="tech-tag">ACTUATOR GRID</span>
+            <span class="tech-tag">EMG SIGNALS</span>
+          </div>
+        </div>
+
+        <div class="layer-card reveal-card" data-delay="150">
+          <div class="layer-top">
+            <span class="layer-num">L.02</span>
+            <div class="layer-icon-bar"></div>
+          </div>
+          <h3 class="layer-title">CONTEXTUAL<br>AI VISION</h3>
+          <p>Cameras read the environment in real time — identifying components, assessing state, selecting the correct skill encoding from the library. The right master's technique, for this exact situation, activated instantly.</p>
+          <div class="layer-footer">
+            <span class="tech-tag">REAL-TIME CV</span>
+            <span class="tech-tag">PATTERN MATCH</span>
+          </div>
+        </div>
+
+        <div class="layer-card reveal-card featured" data-delay="300">
+          <div class="layer-top">
+            <span class="layer-num">L.03</span>
+            <div class="layer-icon-bar accent-bar"></div>
+          </div>
+          <div class="featured-badge">2050 DIFFERENTIATOR</div>
+          <h3 class="layer-title">ARTIFICIAL<br>SYNESTHESIA</h3>
+          <p>Masters develop cross-modal sensory associations over years — they feel system state before consciously registering it. IMPRINT reverse-engineers those associations and pre-encodes them through calibrated audio-haptic stimulation. The user inherits instincts.</p>
+          <div class="layer-footer">
+            <span class="tech-tag">CROSS-MODAL</span>
+            <span class="tech-tag">NEURAL ENCODE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASE 1: NUCLEAR -->
+  <section id="nuclear" class="section use-case-section nuclear-section">
+    <div class="uc-image-half">
+      <img src="assets/nuclear.png" alt="Nuclear Reactor Crisis">
+      <div class="uc-image-scanlines"></div>
+      <div class="uc-image-vignette"></div>
+      <div class="nuclear-hud">
+        <div class="hud-row"><span class="hud-key">REACTOR</span><span class="hud-val">1 : CORE STATUS</span></div>
+        <div class="hud-row alert"><span class="hud-key">STATE</span><span class="hud-val blink">⚠ SCRAM INITIATED</span></div>
+        <div class="hud-row"><span class="hud-key">CORE TEMP</span><span class="hud-val">CRITICAL</span></div>
+        <div class="hud-row"><span class="hud-key">T-MINUS</span><span class="hud-val timer-display" id="nuclear-timer">04:00.00</span></div>
+        <div class="hud-row"><span class="hud-key">IMPRINT</span><span class="hud-val accent-val">ENCODING ACTIVE</span></div>
+      </div>
+    </div>
+    <div class="uc-content-half">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <span class="section-label">// PRIMARY USE CASE</span>
+      </div>
+      <h2 class="uc-title reveal-title">MANUAL<br>SCRAM.</h2>
+      <p class="uc-body">400 new reactors built globally in 20 years. The workforce couldn't scale with demand. An operator with 8 months of experience faces instruments dark, control rod insertion by feel. Four minutes.</p>
+      <p class="uc-outcome">The correct insertion rhythm takes a decade to develop. With IMPRINT, that muscle memory arrives in real time.</p>
+      <div class="uc-end-line">He saves the reactor. He's never done it before.</div>
+    </div>
+  </section>
+
+  <!-- USE CASE 2: ART -->
+  <section id="art" class="section use-case-section art-section">
+    <div class="uc-content-half art-content">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <span class="section-label">// SECONDARY USE CASE</span>
+      </div>
+      <h2 class="uc-title reveal-title">THE STRAPPO<br>TECHNIQUE.</h2>
+      <p class="uc-body">Florence, 2050. A 15th-century Ghirlandaio fresco — the wall behind it crumbling. The conservator must detach the fresco intact using a technique requiring 20 years of haptic mastery. One wrong pull.</p>
+      <p class="uc-outcome art-outcome">IMPRINT carries the hands of every master conservator who ever performed this procedure.</p>
+      <div class="uc-end-line art-endline">She feels resistance she's never felt before — and knows exactly what it means.</div>
+    </div>
+    <div class="uc-image-half art-image-half">
+      <img src="assets/art.png" alt="Art Conservation Fresco">
+      <div class="uc-image-vignette"></div>
+      <div class="art-hud">
+        <div class="art-hud-row"><span>RESISTANCE SENSOR</span><span>0.04 N</span></div>
+        <div class="art-hud-row"><span>TECHNIQUE</span><span>STRAPPO</span></div>
+        <div class="art-hud-row accent-hud-row"><span>IMPRINT STATUS</span><span>ACTIVE</span></div>
+        <div class="art-hud-row"><span>HERITAGE AGE</span><span>600 YRS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA MOAT -->
+  <section id="moat" class="section moat-section">
+    <div class="moat-ticker-bar">
+      <div class="moat-ticker" id="moat-ticker">
+        <span>// 400 REACTORS BUILT 2030–2050</span>
+        <span>// 8–10 YEARS MANUAL INTUITION</span>
+        <span>// $250,000 TRAINING COST</span>
+        <span>// 04 MINUTES SCRAM WINDOW</span>
+        <span>// 600 YEARS HUMAN HERITAGE</span>
+        <span>// THE LIBRARY CANNOT BE REPLICATED</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-num">05</span>
+        <span class="section-label">// COMPETITIVE MOAT</span>
+      </div>
+      <h2 class="section-title reveal-up">THE DATA<br><span class="text-accent">FLYWHEEL.</span></h2>
+
+      <div class="flywheel-grid reveal-up">
+        <div class="fw-step">
+          <div class="fw-icon">01</div>
+          <p>More Sessions</p>
+          <div class="fw-arrow">→</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-icon">02</div>
+          <p>Better Encodings</p>
+          <div class="fw-arrow">→</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-icon">03</div>
+          <p>More Accurate Transfers</p>
+          <div class="fw-arrow">→</div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-icon">04</div>
+          <p>More Trust</p>
+          <div class="fw-arrow">→</div>
+        </div>
+        <div class="fw-step close">
+          <div class="fw-icon accent-icon">∞</div>
+          <p>More Sessions</p>
+        </div>
+      </div>
+
+      <div class="moat-statement reveal-up">
+        <p>The technology is eventually replicable. The library of embodied human mastery accumulated over years is <span class="text-accent">not.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE: WHY 2050 -->
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-num">06</span>
+        <span class="section-label">// CONVERGENCE TIMELINE</span>
+      </div>
+      <h2 class="section-title reveal-up">WHY <span class="text-accent">2050.</span></h2>
+      <div class="timeline">
+        <div class="tl-item reveal-up" data-delay="0">
+          <div class="tl-year">~2038</div>
+          <div class="tl-bar"><div class="tl-progress" style="width:40%"></div></div>
+          <div class="tl-label">Haptic glove actuators at glove-form scale</div>
+        </div>
+        <div class="tl-item reveal-up" data-delay="100">
+          <div class="tl-year">~2040</div>
+          <div class="tl-bar"><div class="tl-progress" style="width:55%"></div></div>
+          <div class="tl-label">Physical performance data collection at scale</div>
+        </div>
+        <div class="tl-item reveal-up" data-delay="200">
+          <div class="tl-year">~2045</div>
+          <div class="tl-bar"><div class="tl-progress" style="width:78%"></div></div>
+          <div class="tl-label">AI compute sufficient for pattern encoding & reproduction</div>
+        </div>
+        <div class="tl-item reveal-up" data-delay="300">
+          <div class="tl-year">~2045</div>
+          <div class="tl-bar"><div class="tl-progress" style="width:78%"></div></div>
+          <div class="tl-label">Cross-modal neural encoding (artificial synesthesia)</div>
+        </div>
+        <div class="tl-item reveal-up highlight-tl" data-delay="400">
+          <div class="tl-year accent">2050</div>
+          <div class="tl-bar"><div class="tl-progress tl-full" style="width:100%"></div></div>
+          <div class="tl-label">All layers converge. IMPRINT deploys.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <h1 class="footer-logo glitch-text" data-text="IMPRINT">IMPRINT</h1>
+        <p class="footer-sub">Neural-Haptic Skill Transfer System</p>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <span>© 2050 NEURAL-HAPTIC SYSTEMS INC.</span>
+        <span class="text-accent">THE GAP IS CLOSED.</span>
+        <span>REF. NHX-SYSTEM-7</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="three-bg.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
